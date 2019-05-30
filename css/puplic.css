@@ -51,7 +51,11 @@
 		color: darkcyan;
 	}
 	.home_special_offer#programs {
-    height: 450px;
+    height: 500px;
+	
+	}
+    .home_special_offer p {
+    font-size: 14px;
 	
 	}
 .slider {

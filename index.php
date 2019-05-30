@@ -3,8 +3,7 @@ include 'connection.php';
 include 'nav.html';
 $stat = $con->prepare("SELECT * FROM posts ORDER BY id DESC");
 $stat->execute();
-$cats = $stat->fetchAll();
-
+$Posts = $stat->fetchAll();
 
 ?>
 
@@ -32,134 +31,49 @@ $cats = $stat->fetchAll();
 </div>
 	<div class='container'>
 		<div class="row">
+<?php foreach($Posts as $post){
 
+?>
 <div class="col-md-4 col-xs-12">
     <div class="home_special_offer" id="programs">
         <a href="images/post.jpg">
-            <div class="img_container" style="background-image: url('images/post.jpg')">
+            <div class="img_container" style="background-image: url('<?php echo $post['image']; ?>')">
                 <div class="short_info" id="home_short_info">
                     <span class="price">
                        <span class="from">from</span>
-                         <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">1175</span>
-                            <input type="hidden" id="hmin_price1175" value="1175">
-
-                                 <span class="from" style="color:#FF0004">was</span>
-                                        <span style="text-decoration:line-through; color:#FF0004" class="currencySign">$</span><span style="text-decoration:line-through; color:#FF0004" id="min_price1305" class="convertable" itemprop="lowPrice">1305</span>
-                                            <input type="hidden" id="hmin_price1305" value="1305">
+                         <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice"><?php echo  $post['price'] ;?></span>
+                           <span class="from" style="color:#FF0004">was</span>
+                                        <span style="text-decoration:line-through; color:#FF0004" class="currencySign">$</span><span style="text-decoration:line-through; color:#FF0004" id="min_price1305" class="convertable" itemprop="lowPrice"><?php echo $post['sale'] ?></span>
+                                        
                                                  </span>
                                         </div>
-                                    
-                                </div>
+                              </div>
                             </a>
                             <div class="home_special_offer_content">
                                 <div class="home_special_offer_title">
                                     <h2>
-                                        <a href="/"><strong>Jaz Dahabeya - Dahab - 4 Days / 3 Nights</strong>
+                                        <a href="/"><strong><?php echo $post['title'] ;?></strong>
                                         </a>
                                     </h2>
                                 </div>
-                                <div class="home_special_offer_types">
+                                        <div class="home_special_offer_types">
                                         <div class="home_special_offer_types_box">
-                                            Private Tour      </div>
+                                            <?php echo $post['kind_of_tour'] ;?> Tour      </div>
                                         <div class="home_special_offer_types_box">
-                                            Saturday, Sunday &amp; Thursday  </div>
+                                            <?php echo  $post['days'] ;?>  </div>
                                 </div>
-                                <div class="home_special_offer_description">
-                                    <p>Experience the delights of Egypt with a Nile cruise vacation. 
-										You’ll begin your expedition in Cairo, where you’ll visit the Giza Pyramids and 
-										the Egyptian Museum before flying to Luxor to embark on a Nile cruise ship. Discover captivating ruins and majestic natural scenery between Luxor 
-										and Aswan on a luxurious 5-day cruise before returning to Cairo to depart.....</p>
+                                 <div class="home_special_offer_description">
+                                    <p><?php echo  $post['content'] ;?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+<?php   } ?>
 
 
+                            
 
-					<div class="col-md-4 col-xs-12">
-    <div class="home_special_offer" id="programs">
-        <a href="images/post.jpg">
-            <div class="img_container" style="background-image: url('images/post.jpg')">
-                <div class="short_info" id="home_short_info">
-                    <span class="price">
-                       <span class="from">from</span>
-                         <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">1175</span>
-                            <input type="hidden" id="hmin_price1175" value="1175">
-
-                                 <span class="from" style="color:#FF0004">was</span>
-                                        <span style="text-decoration:line-through; color:#FF0004" class="currencySign">$</span><span style="text-decoration:line-through; color:#FF0004" id="min_price1305" class="convertable" itemprop="lowPrice">1305</span>
-                                            <input type="hidden" id="hmin_price1305" value="1305">
-                                                 </span>
-                                        </div>
-                                    
-                                </div>
-                            </a>
-                            <div class="home_special_offer_content">
-                                <div class="home_special_offer_title">
-                                    <h2>
-                                        <a href="/"><strong>Jaz Dahabeya - Dahab - 4 Days / 3 Nights</strong>
-                                        </a>
-                                    </h2>
-                                </div>
-                                <div class="home_special_offer_types">
-                                        <div class="home_special_offer_types_box">
-                                            Private Tour      </div>
-                                        <div class="home_special_offer_types_box">
-                                            Saturday, Sunday &amp; Thursday  </div>
-                                </div>
-                                <div class="home_special_offer_description">
-                                    <p>Experience the delights of Egypt with a Nile cruise vacation. 
-										You’ll begin your expedition in Cairo, where you’ll visit the Giza Pyramids and 
-										the Egyptian Museum before flying to Luxor to embark on a Nile cruise ship. Discover captivating ruins and majestic natural scenery between Luxor 
-										and Aswan on a luxurious 5-day cruise before returning to Cairo to depart.....</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-					<div class="col-md-4 col-xs-12">
-    <div class="home_special_offer" id="programs">
-        <a href="images/post.jpg">
-            <div class="img_container" style="background-image: url('images/post.jpg')">
-                <div class="short_info" id="home_short_info">
-                    <span class="price">
-                       <span class="from">from</span>
-                         <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">1175</span>
-                            <input type="hidden" id="hmin_price1175" value="1175">
-
-                                 <span class="from" style="color:#FF0004">was</span>
-                                        <span style="text-decoration:line-through; color:#FF0004" class="currencySign">$</span><span style="text-decoration:line-through; color:#FF0004" id="min_price1305" class="convertable" itemprop="lowPrice">1305</span>
-                                            <input type="hidden" id="hmin_price1305" value="1305">
-                                                 </span>
-                                        </div>
-                                    
-                                </div>
-                            </a>
-                            <div class="home_special_offer_content">
-                                <div class="home_special_offer_title">
-                                    <h2>
-                                        <a href="/"><strong>Jaz Dahabeya - Dahab - 4 Days / 3 Nights</strong>
-                                        </a>
-                                    </h2>
-                                </div>
-                                <div class="home_special_offer_types">
-                                        <div class="home_special_offer_types_box">
-                                            Private Tour      </div>
-                                        <div class="home_special_offer_types_box">
-                                            Saturday, Sunday &amp; Thursday  </div>
-                                </div>
-                                <div class="home_special_offer_description">
-                                    <p>Experience the delights of Egypt with a Nile cruise vacation. 
-										You’ll begin your expedition in Cairo, where you’ll visit the Giza Pyramids and 
-										the Egyptian Museum before flying to Luxor to embark on a Nile cruise ship. Discover captivating ruins and majestic natural scenery between Luxor 
-										and Aswan on a luxurious 5-day cruise before returning to Cairo to depart.....</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 </div><!--row-->
 </div>
