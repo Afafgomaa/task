@@ -1,0 +1,78 @@
+
+
+
+
+.background {
+	background-color: #f6f7f9;
+}
+
+.home_special_offer {
+    width: 100%;
+    float: left;
+    height: 360px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 0;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 2px 7px 0 #cfcfcf80;
+}
+.home_special_offer .short_info {
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: darkcyan;
+    text-align: center;
+}
+.home_special_offer .img_container {
+    height: 195px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	}
+
+	.home_special_offer_content {
+    padding: 10px;
+    float: left;
+    width: 100%;
+	
+	}
+
+	.home_special_offer_title h2{
+		font-size: 16px;
+	}
+	.home_special_offer_types {
+		color: darkcyan;
+	}
+	.home_special_offer#programs {
+    height: 450px;
+	
+	}
+.slider {
+	background-size: cover;
+   min-height: 450px;
+}
+
+.navbar-nav li {
+     font-weight: normal;
+    font-family: Bitter,Georgia,Times;
+    font-size: 1em;
+	padding-left: 20px;
+}
+.bg-light{
+	background-color: #fff !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(49, 35, 22);
+	}
+
+footer{
+	background:rgb(241, 241, 241);
+	text-align: center;
+}
